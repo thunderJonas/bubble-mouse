@@ -1,0 +1,244 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+section {
+    /*position: relative;*/
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 300;
+}
+
+nav ul {
+    list-style: none;
+    z-index: 500;
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    z-index: 500;
+
+}
+
+nav ul li a {
+    z-index: 300;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    z-index: 800;
+
+}
+
+.logo img {
+    width: 100px; /* Größe des Apple-Logos anpassen */
+}
+
+.hero {
+    /*background-image: url('hero-image.jpg'); !* Hintergrundbild hier einfügen *!*/
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007AFF; /* Apple Blue */
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 300;
+
+}
+
+.featured-products {
+    /*padding: 40px;*/
+}
+
+.newsletter {
+    background-color: #f0f0f0;
+    text-align: center;
+    /*padding: 40px;*/
+}
+
+form input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form button {
+    background-color: #007AFF; /* Apple Blue */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+#parallax2 {
+    background-image: url('img/philipp-katzenberger-iIJrUoeRoCQ-unsplash.jpg'); /* Hintergrundbild hier einfügen */
+}
+
+#features {
+    background-color: #f0f0f0; /* Hintergrundfarbe anpassen */
+    text-align: center;
+    padding: 40px;
+}
+
+#features ul {
+    list-style: none;
+    padding: 0;
+}
+
+#features li {
+    margin: 10px 0;
+}
+
+/*----------------------------------------------------------------------------------*/
+.phoneConti {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.iphone {
+    width: 300px;
+    height: 600px;
+    background-color: #000;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    perspective: 1000px;
+    z-index: 300;
+
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    color: aliceblue;
+    background-color: #000;
+    border-radius: 20px;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Anpassen der 3D-Transformation für den Effekt */
+.iphone:hover .screen {
+    animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f9c51c; /* Farbe des Konfettis anpassen */
+    border-radius: 50%;
+    opacity: 0.8;
+    transform-origin: center;
+    animation: confetti-fall 1s linear infinite, confetti-drift 10s linear infinite;
+    z-index: 20;
+
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+@keyframes confetti-drift {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    100% {
+        transform: translateX(100vw) rotate(360deg);
+    }
+}
+
+/* Füge die folgenden Animationen hinzu */
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+@keyframes scale-up {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.circle {
+    position: absolute;
+    background-color: #f9c51c; /* Farbe anpassen */
+    border-radius: 50%;
+    transform-origin: center;
+    pointer-events: none;
+    z-index: 200;
+}
+
+.animation-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+}
+
+
